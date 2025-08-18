@@ -1,17 +1,16 @@
-import java.util.Arrays;
-
 class Solution {
     public int[] transformArray(int[] nums) {
         int[] ans = new int[nums.length];
+        int counter = 0;
         for(int i = 0; i < ans.length; i++){
             if(nums[i] % 2 == 0){
-                ans[i] = 0;
-            }else{
-                ans[i] = 1;
+                counter++;
             }
         
         }
-         Arrays.sort(ans);
+        for(int i = counter; i < nums.length; i++){
+            ans[i] = 1;
+        } 
         return ans;
     }
 }
